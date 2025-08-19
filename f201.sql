@@ -33,12 +33,12 @@ prompt APPLICATION 201 - CICD_DEMO
 -- Application Export:
 --   Application:     201
 --   Name:            CICD_DEMO
---   Date and Time:   16:59 Tuesday August 19, 2025
+--   Date and Time:   17:16 Tuesday August 19, 2025
 --   Exported By:     WKSP_EBS2CLOUD_MIGRATION
 --   Flashback:       0
 --   Export Type:     Application Export
 --     Pages:                      4
---       Items:                    4
+--       Items:                    5
 --       Processes:                5
 --       Regions:                  3
 --       Buttons:                  1
@@ -106,7 +106,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_value_01=>'CICD_DEMO'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>6
-,p_version_scn=>12213465998564
+,p_version_scn=>12213466549677
 ,p_print_server_type=>'INSTANCE'
 ,p_file_storage=>'DB'
 ,p_is_pwa=>'Y'
@@ -1289,6 +1289,21 @@ wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(24768455404890010)
 ,p_name=>'P2_NEW'
 ,p_item_sequence=>20
+,p_prompt=>'Sample Test'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>30
+,p_field_template=>1609121967514267634
+,p_item_template_options=>'#DEFAULT#'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'disabled', 'N',
+  'submit_when_enter_pressed', 'N',
+  'subtype', 'TEXT',
+  'trim_spaces', 'BOTH')).to_clob
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(24768584082890011)
+,p_name=>'P2_NEW_1'
+,p_item_sequence=>30
 ,p_prompt=>'Sample Test'
 ,p_display_as=>'NATIVE_TEXT_FIELD'
 ,p_cSize=>30
